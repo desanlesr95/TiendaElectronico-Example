@@ -1,0 +1,57 @@
+h1{
+  font-family: Jokerman;
+  color: rgb(89, 66, 177);
+  font-size: 3em;
+  text-align: center;
+
+}
+#Formulario{
+  margin-top: 10%;
+
+}
+#Mision{
+  margin-top: 10%;
+}
+#Vision{
+  margin-top: 10%;
+
+}
+#Eslogan{
+  text-align: center;
+}
+.center{
+  text-align: center;
+}
+button{
+  font-family: Impact;
+  background-color: rgb(14, 98, 30);
+  color: black;
+}
+input:active{
+    padding: 2 px blue;
+    background-color: blue;
+}
+a{
+  color: orange;
+}
+h2,p{
+  margin-left: 1%;
+  color:rgb(0, 0, 0);
+  text-align: justify;
+}
+p{
+  font-size: 18px;
+  text-align: justify;
+}
+label{
+    width: 20%;
+  }
+body{
+    background-image: url("../imagenes/z.jpg");
+}
+h2{
+  text-align: center;
+}
+input{
+  margin-left: 25%;
+}

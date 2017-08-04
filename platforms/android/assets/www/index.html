@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="CSS/ESTILOS.CSS">
+<script src="vendor/jquery/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>ElectroWomen</h1>
+    <p id="Eslogan">Bueno, bonito, barato en ElectroWomen</p>
+    <div class="row">
+
+      <div class="col-xs-12" id="Formulario">
+            <p class="center">Iniciar sesion</p>
+            <input type="text"  value="" placeholder="Inserte Usuario" name="Usuario" id="Usuario" required=""><br><br>
+            <input type="password"  value="" placeholder="contraseña" name="contrasena" id="contrasena" required=""><br><br>
+            <input type="submit" name="ingresar" id="ingresar" value="ingresar" onclick="checar();">
+            <p class="center">Si no tiene una cuenta <a href="Registrar.html">registrarse aqui</a> </p>
+      </div>
+      <div class="col-xs-12" id="Mision">
+        <h2>Mision</h2>
+        <p>Somos una empresa que busca la satisfacción de nuestros clientes facilitándoles productos,
+          servicios confiables con calidad y garantía a precios solidarios.
+           Así mismo propiciar un ambiente de trabajo agradable lleno de armonía y satisfacción por el trabajo.</p>
+      </div>
+
+      <div class="col-xs-12" id="Vision">
+        <h2>Vision</h2>
+        <p>Ser líderes en  el mercado a través de la búsqueda de nuevos horizontes comerciales
+           y de esta forma expandirnos a otras ciudades dentro del territorio nacional.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="12" id="Valores">
+        <h2>Valores</h2>
+        <p>Honestidad, Responsabilidad, Respeto, Humildad, Solidaridad lealtad y Trabajo en equipo.</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<script type="text/javascript">
+  function checar() {
+    var user=document.getElementById('Usuario').value;
+    var contrasena=document.getElementById('contrasena').value;
+    $.ajax({
+      url: "http://dianaesteban.esy.es/verificar.php?user="+user+"&contrasena="+contrasena,
+      type: "GET",
+      beforeSend: function () {
+
+      },
+      success: function (a) {
+          if (!a) {
+              location.href="productos.html";
+          }
+          else{
+            alert("Usuario incorrecto")
+          }
+      },
+      error: function () {
+          alert("Error");
+      }
+    });
+  }
+</script>
